@@ -30,7 +30,7 @@ export class ProductPage extends BasePage {
 
   async clickTab(index: number): Promise<void> {
     await this.tabs.nth(index).click();
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState('load');
   }
 
   async hasSection(text: string | RegExp): Promise<boolean> {

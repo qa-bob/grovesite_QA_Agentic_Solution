@@ -12,7 +12,7 @@ import { test, expect } from '@fixtures/site.fixture';
 test.describe('Pricing Page @functional', () => {
   test.beforeEach(async ({ pricingPage }) => {
     await pricingPage.navigate();
-    await pricingPage.page.waitForLoadState('networkidle');
+    await pricingPage.page.waitForLoadState('load');
   });
 
   // ── Page load ────────────────────────────────────────────────────────────────

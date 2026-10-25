@@ -54,7 +54,7 @@ for (const { label, path } of INNER_PAGES) {
         errors.push(`[pageerror] ${err.message}`);
       });
 
-      await page.goto(path, { waitUntil: 'networkidle' });
+      await page.goto(path, { waitUntil: 'load' });
 
       const critical = errors.filter((e) => {
         const lower = e.toLowerCase();
