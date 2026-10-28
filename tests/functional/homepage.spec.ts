@@ -11,7 +11,7 @@ import { test, expect } from '@fixtures/site.fixture';
 
 test.describe('Homepage Content @functional', () => {
   test.beforeEach(async ({ page, siteConfig }) => {
-    await page.goto(siteConfig.url, { waitUntil: 'networkidle' });
+    await page.goto(siteConfig.url, { waitUntil: 'load' });
   });
 
   // ── Hero ──────────────────────────────────────────────────────────────────────

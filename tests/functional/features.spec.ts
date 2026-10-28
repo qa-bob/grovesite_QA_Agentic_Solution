@@ -14,7 +14,7 @@ import { test, expect } from '@fixtures/site.fixture';
 test.describe('Features Page @functional', () => {
   test.beforeEach(async ({ featuresPage }) => {
     await featuresPage.navigate();
-    await featuresPage.page.waitForLoadState('networkidle');
+    await featuresPage.page.waitForLoadState('load');
   });
 
   // ── Page load ────────────────────────────────────────────────────────────────
